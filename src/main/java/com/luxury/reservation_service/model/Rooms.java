@@ -6,15 +6,15 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class Customer {
+public class Rooms {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long customerId;
-    private String name;
-    private String nic;
-    private String email;
-    private String phone;
+    private Long roomId;
+
+    @ManyToOne
+    @JoinColumn(name = "room_type_name", nullable=false)
+    private RoomType roomType;
 }

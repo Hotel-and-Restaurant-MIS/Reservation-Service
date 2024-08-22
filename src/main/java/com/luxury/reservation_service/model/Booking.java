@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @Builder
 public class Booking {
     @Id
-    private Long bookingID;
+    private Long bookingId;
 
     private String roomTypeName;
     private LocalDate checkinDate;

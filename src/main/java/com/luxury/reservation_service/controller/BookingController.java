@@ -22,6 +22,7 @@ public class BookingController {
 
     private final BookingService bookingService;
 
+    @Autowired
     public BookingController(BookingService bookingService, ReservationService reservationService) {
         this.bookingService = bookingService;
     }
